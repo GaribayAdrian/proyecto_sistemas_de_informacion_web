@@ -1,0 +1,76 @@
+
+INSERT INTO usuarios
+VALUES
+(1,'Juan Pérez','[juan@empresa.com](mailto:juan@empresa.com)','Administrador');
+
+INSERT INTO categorias
+VALUES
+(1,'Electrónica','Equipos electrónicos'),
+(2,'Accesorios','Periféricos y accesorios');
+
+INSERT INTO proveedores
+VALUES
+(1,'Computech','5551234567','[ventas@computech.com](mailto:ventas@computech.com)','CDMX');
+
+INSERT INTO clientes
+VALUES
+(1,'Carlos García','5512345678','[carlos@gmail.com](mailto:carlos@gmail.com)','CDMX');
+
+INSERT INTO productos
+VALUES
+(1,'Laptop HP','Laptop 16GB RAM',12000.00,10,1),
+(2,'Mouse Logitech','Mouse inalámbrico',350.00,50,2);
+
+INSERT INTO compras
+VALUES
+(1,'2026-05-29',25700.00,1);
+
+INSERT INTO detalle_compras
+VALUES
+(1,1,1,2,11000.00,22000.00),
+(2,1,2,10,370.00,3700.00);
+
+INSERT INTO ventas
+VALUES
+(1,'2026-05-30',12700.00,1,1);
+
+INSERT INTO detalle_ventas
+VALUES
+(1,1,1,1,12000.00,12000.00),
+(2,1,2,2,350.00,700.00);
+
+SELECT * FROM productos;
+
+SELECT * FROM clientes;
+
+SELECT * FROM ventas;
+
+SELECT nombre_producto, precio
+FROM productos;
+
+SELECT *
+FROM productos
+WHERE stock > 10;
+
+UPDATE productos
+SET stock = 15
+WHERE id_producto = 1;
+
+UPDATE clientes
+SET telefono = '5599999999'
+WHERE id_cliente = 1;
+
+UPDATE productos
+SET precio = 13000.00
+WHERE id_producto = 1;
+
+
+DELETE FROM detalle_ventas
+WHERE id_detalle_venta = 2;
+
+INSERT INTO clientes
+VALUES
+(99,'Cliente Prueba','5551234567','prueba@gmail.com','CDMX');
+
+DELETE FROM clientes
+WHERE id_cliente = 99;
