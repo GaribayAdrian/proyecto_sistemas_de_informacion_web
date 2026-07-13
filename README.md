@@ -7,5 +7,5 @@ Integrantes del equipo:
 -Miranda Hernández Axel Svein
 -Muñoz Álvarez Manuel
 
-Grupo: 4EV22
+Grupo: 4EV24
 
